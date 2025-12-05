@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🐝 What Kind of Bee Are You?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- Decorative border images -->
+      <img src="images/border-right.png" alt="decorative border" class="border-img border-right persistent-decor">
+      <img src="images/border-right.png" alt="decorative border" class="border-img border-left persistent-decor">
+      
+      <!-- Decorative images that persist throughout quiz -->
+      <img src="images/flowers-yellow.png" alt="flower yellow" class="decor-img decor-top-left start-only-decor">
+      <img src="images/flower-pink2.png" alt="flower pink" class="decor-img decor-top-right start-only-decor">
+      <img src="images/decor-beesmall.png" alt="decorative bee" class="decor-img decor-bottom-left persistent-decor">
+      <img src="images/decor-beesmall.png" alt="decorative bee" class="decor-img decor-bottom-left-alt persistent-decor">
+      <img src="images/decor-beesmall.png" alt="decorative bee" class="decor-img decor-bottom-left-alt-2 persistent-decor">
+      <img src="images/decor-bee.png" alt="decorative bee" class="decor-img decor-bottom-right persistent-decor">
+      <img src="images/flower-pink.png" alt="flower pink" class="decor-img decor-center persistent-decor">
+      
+      <section id="start-screen">
+        <div class="start-content">
+          <h1>What kind of Bee are you?</h1>
+          <button id="start-btn" class="button">Start Quiz</button>
+        </div>
+      </section>
+      
+      <header style="display: none;">
+        <h1>What kind of Bee are you?</h1>
+      </header>      <section class="question" id="q1" role="region" aria-labelledby="q1-heading">
+        <h2 id="q1-heading">What's your drink of choice?</h2>
+        <div class="answer-choice">
+          <img src="images/coffee.jpg" alt="coffee" />
+          <br />
+          <button class="button" id="q1a1" data-result="5">Coffee</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/water.jpeg" alt="water" />
+          <br />
+          <button class="button" id="q1a2" data-result="6">Water</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/tea.jpg" alt="tea" />
+          <br />
+          <button class="button" id="q1a3" data-result="4">Tea</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/soda.jpg" alt="soda pop" />
+          <br />
+          <button class="button" id="q1a4" data-result="3">Soda Pop</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/energy-drink.jpg" alt="energy drink" />
+          <br />
+          <button class="button" id="q1a5" data-result="4">Energy Drink</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/juice.jpg" alt="juice" />
+          <br />
+          <button class="button" id="q1a6" data-result="8">Juice</button>
+        </div>
+      </section>
+
+      <section class="question" id="q2" role="region" aria-labelledby="q2-heading">
+        <h2 id="q2-heading">What's your favourite time of day?</h2>
+        <div class="answer-choice">
+          <img src="images/morning.jpg" alt="morning" />
+          <br />
+          <button class="button" id="q2a1" data-result="1">Morning</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/afternoon.jpg" alt="afternoon" />
+          <br />
+          <button class="button" id="q2a2" data-result="2">Afternoon</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/sunset.jpg" alt="evening" />
+          <br />
+          <button class="button" id="q2a3" data-result="4">Evening</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/night.jpg" alt="night" />
+          <br />
+          <button class="button" id="q2a4" data-result="8">Night</button>
+        </div>
+      </section>
+
+      <section class="question" id="q3" role="region" aria-labelledby="q3-heading">
+        <h2 id="q3-heading">Pick a flower</h2>
+        <div class="answer-choice">
+          <img src="images/daisy.jpg" alt="daisy" />
+          <br />
+          <button class="button" id="q3a1" data-result="2">Daisy</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/rose.jpg" alt="rose" />
+          <br />
+          <button class="button" id="q3a2" data-result="3">Rose</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/iris.jpg" alt="iris" />
+          <br />
+          <button class="button" id="q3a3" data-result="5">Iris</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/hyacinth.jpg" alt="hyacinth" />
+          <br />
+          <button class="button" id="q3a4" data-result="4">Hyacinth</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/sunflower.jpeg" alt="sunflower" />
+          <br />
+          <button class="button" id="q3a5" data-result="6">Sunflower</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/amaryllis.jpg" alt="amaryllis" />
+          <br />
+          <button class="button" id="q3a6" data-result="1">Amaryllis</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/violet.jpg" alt="violet" />
+          <br />
+          <button class="button" id="q3a7" data-result="7">Violet</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/lotus.jpeg" alt="lotus" />
+          <br />
+          <button class="button" id="q3a8" data-result="8">Lotus</button>
+        </div>
+      </section>
+
+      <section class="question" id="q4" role="region" aria-labelledby="q4-heading">
+        <h2 id="q4-heading">What do you usually do on the weekend?</h2>
+        <div class="answer-choice">
+          <img src="images/party.jpg" alt="party" />
+          <br />
+          <button class="button" id="q4a1" data-result="3">Go out and have fun!</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/inside.jpg" alt="inside" />
+          <br />
+          <button class="button" id="q4a2" data-result="7">Stay inside and do an activity by myself</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/chores.jpg" alt="tasks" />
+          <br />
+          <button class="button" id="q4a3" data-result="6">Catch up on tasks and chores that need to be done</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/hangout.jpg" alt="hangout" />
+          <br />
+          <button class="button" id="q4a4" data-result="1">Invite people over for a casual hang out</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/work.jpg" alt="work" />
+          <br />
+          <button class="button" id="q4a5" data-result="5">I work on the weekend :(</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/sleep2.jpg" alt="sleep" />
+          <br />
+          <button class="button" id="q4a6" data-result="8">I'm sleep</button>
+        </div>
+      </section>
+
+      <section class="question" id="q5" role="region" aria-labelledby="q5-heading">
+        <h2 id="q5-heading">What's your work ethic like?</h2>
+        <div class="answer-choice">
+          <img src="images/early.jpg" alt="early" />
+          <br />
+          <button class="button" id="q5a1" data-result="5">I finish all my work early</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/work-before.jpg" alt="work before" />
+          <br />
+          <button class="button" id="q5a2" data-result="6">I get my work done just before the deadline so it's still on time</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/scramble.jpg" alt="scramble" />
+          <br />
+          <button class="button" id="q5a3" data-result="4">I scramble to finish my work on the day of the deadline</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/late-ok.jpg" alt="late" />
+          <br />
+          <button class="button" id="q5a4" data-result="2">It's late but as long as it's done and I did my best!</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/late-hate.jpg" alt="hate" />
+          <br />
+          <button class="button" id="q5a5" data-result="7">It's late and I hate myself for it</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/huh.gif" alt="forgot" />
+          <br />
+          <button class="button" id="q5a6" data-result="8">I forgot.</button>
+        </div>
+      </section>
+
+      <section class="question" id="q6" role="region" aria-labelledby="q6-heading">
+        <h2 id="q6-heading">Glass half full or half empty?</h2>
+        <div class="answer-choice">
+          <img src="images/half-full.jpg" alt="half full" />
+          <br />
+          <button class="button" id="q6a1" data-result="2">Half full</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/half-empty.jpg" alt="half empty" />
+          <br />
+          <button class="button" id="q6a2" data-result="7">Half empty</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/drank2.jpg" alt="drank" />
+          <br />
+          <button class="button" id="q6a3" data-result="8">It's completely empty because I drank it all</button>
+        </div>
+      </section>
+
+      <section class="question" id="q7" role="region" aria-labelledby="q7-heading">
+        <h2 id="q7-heading">Which quote resonates with you the most?</h2>
+        <div class="answer-choice">
+          <br />
+          <button class="button" id="q7a1" data-result="1">If you keep holding onto yesterday, what will you be tomorrow?</button>
+        </div>
+        <div class="answer-choice">
+          <br />
+          <button class="button" id="q7a2" data-result="7">Not all those who wander are lost.</button>
+        </div>
+        <div class="answer-choice">
+          <br />
+          <button class="button" id="q7a3" data-result="4">This worked in hospitality 'cause it served 👏</button>
+        </div>
+        <div class="answer-choice">
+          <br />
+          <button class="button" id="q7a4" data-result="2">Pain doesn't make people, love does.</button>
+        </div>
+        <div class="answer-choice">
+          <br />
+          <button class="button" id="q7a5" data-result="3">I'd rather have a life of "oh well"s than "what if"s.</button>
+        </div>
+        <div class="answer-choice">
+          <br />
+          <button class="button" id="q7a6" data-result="5">Society flourishes when men plant trees they will never sit in the shade of.</button>
+        </div>
+        <div class="answer-choice">
+          <br />
+          <button class="button" id="q7a7" data-result="8">When I get out, there's going to be carnage.</button>
+        </div>
+        <div class="answer-choice">
+          <br />
+          <button class="button" id="q7a8" data-result="6">Come correct or get corrected.</button>
+        </div>
+      </section>
+
+      <section class="question" id="q8" role="region" aria-labelledby="q8-heading">
+        <h2 id="q8-heading">How do you express yourself?</h2>
+        <div class="answer-choice">
+          <img src="images/words.jpg" alt="words" />
+          <br />
+          <button class="button" id="q8a1" data-result="7">Through words</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/action.jpg" alt="action" />
+          <br />
+          <button class="button" id="q8a2" data-result="1">Through actions</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/emotion.jpg" alt="emotion" />
+          <br />
+          <button class="button" id="q8a3" data-result="2">Through emotions</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/art.jpg" alt="art" />
+          <br />
+          <button class="button" id="q8a4" data-result="8">Through art, in whatever form that may take</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/chess.jpg" alt="chess" />
+          <br />
+          <button class="button" id="q8a4" data-result="4">Through my likes and hobbies</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/stoic.jpg" alt="stoic" />
+          <br />
+          <button class="button" id="q8a4" data-result="6">I don't.</button>
+        </div>
+      </section>
+
+      <section class="question" id="q9" role="region" aria-labelledby="q9-heading">
+        <h2 id="q9-heading">What's your role in a group activity'?</h2>
+        <div class="answer-choice">
+          <img src="images/leader.jpg" alt="leader" />
+          <br />
+          <button class="button" id="q9a1" data-result="1">I take charge and lead the initiative</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/speech.jpg" alt="talk" />
+          <br />
+          <button class="button" id="q9a2" data-result="3">I do all the talking and presenting</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/research.jpg" alt="research" />
+          <br />
+          <button class="button" id="q9a3" data-result="6">I do all the work and research</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/slack.jpg" alt="slack off" />
+          <br />
+          <button class="button" id="q9a4" data-result="8">I slack off...</button>
+        </div>
+      </section>
+
+      <section class="question" id="q10" role="region" aria-labelledby="q10-heading">
+        <h2 id="q10-heading">What motivates you the most?</h2>
+        <div class="answer-choice">
+          <img src="images/success.jpg" alt="success" />
+          <br />
+          <button class="button" id="q10a1" data-result="5">Success at all costs. If my name amounts to nothing, I might as well be nothing</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/friends.jpg" alt="friends" />
+          <br />
+          <button class="button" id="q10a2" data-result="3">A place to belong. I want to be surrounded by my friends and family and know I am loved</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/art2.jpg" alt="art" />
+          <br />
+          <button class="button" id="q10a3" data-result="8">The urge to create. These hands were destined for making beautiful things</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/myself.jpg" alt="myself" />
+          <br />
+          <button class="button" id="q10a4" data-result="6">Myself. I am my own person and nothing can take that away from me. Whatever I make of my life is my choice</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/team.jpg" alt="team" />
+          <br />
+          <button class="button" id="q10a5" data-result="1">Earning the respect of my peers. People will turn to me and know they’re in capable hands</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/friends2.jpg" alt="friends" />
+          <br />
+          <button class="button" id="q10a6" data-result="4">Making memories. I want to look back on my life and hear laughter and see smiles</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/world.jpg" alt="world" />
+          <br />
+          <button class="button" id="q10a7" data-result="7">Curiosity and intrigue. There is so much wonder in this world that I want to learn about</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/love.jpg" alt="love" />
+          <br />
+          <button class="button" id="q10a8" data-result="2">Love. My heart is big and yearns to share that with others who need it most</button>
+        </div>
+      </section>
+
+      <section class="question" id="q11" role="region" aria-labelledby="q11-heading">
+        <h2 id="q11-heading">How do you handle stress?</h2>
+        <div class="answer-choice">
+          <img src="images/exercise.jpg" alt="exercise" />
+          <br />
+          <button class="button" id="q11a1" data-result="5">By exercising or doing some kind of physical activity</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/fun.jpg" alt="fun" />
+          <br />
+          <button class="button" id="q11a2" data-result="4">By distracting myself with something fun</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/talk.jpg" alt="talk" />
+          <br />
+          <button class="button" id="q11a3" data-result="3">By talking about it with a trusted loved one (or professional)</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/alone.jpg" alt="alone" />
+          <br />
+          <button class="button" id="q11a4" data-result="6">By being alone and doing some introspection</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/cries.jpg" alt="cries" />
+          <br />
+          <button class="button" id="q11a5" data-result="7">I don’t. Send help</button>
+        </div>
+      </section>
+
+      <section class="question" id="q12" role="region" aria-labelledby="q12-heading">
+        <h2 id="q12-heading">What's your go-to genre?</h2>
+        <div class="answer-choice">
+          <img src="images/horror.jpg" alt="horror" />
+          <br />
+          <button class="button" id="q12a1" data-result="5">Horror</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/action2.jpg" alt="action" />
+          <br />
+          <button class="button" id="q12a2" data-result="1">Action</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/romance.jpg" alt="romance" />
+          <br />
+          <button class="button" id="q12a3" data-result="2">Romance</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/comedy.jpg" alt="comedy" />
+          <br />
+          <button class="button" id="q12a4" data-result="3">Comedy</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/mystery.jpg" alt="mystery" />
+          <br />
+          <button class="button" id="q12a5" data-result="7">Mystery</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/drama.jpg" alt="drama" />
+          <br />
+          <button class="button" id="q12a6" data-result="8">Drama</button>
+        </div>
+      </section>
+
+      <section class="question" id="q13" role="region" aria-labelledby="q13-heading">
+        <h2 id="q13-heading">Which location calls out to you most?</h2>
+        <div class="answer-choice">
+          <img src="images/lake.jpg" alt="lakeview" />
+          <br />
+          <button class="button" id="q13a1" data-result="7">A beautiful lakeview</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/cabin.jpg" alt="cabin" />
+          <br />
+          <button class="button" id="q13a2" data-result="2">A peaceful cabin getaway</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/mountain.jpg" alt="mountain" />
+          <br />
+          <button class="button" id="q13a3" data-result="6">An adventurous mountainside</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/city.jpg" alt="city" />
+          <br />
+          <button class="button" id="q13a4" data-result="5">A bustling cityscape</button>
+        </div>
+      </section>
+
+      <section class="question" id="q14" role="region" aria-labelledby="q14-heading">
+        <h2 id="q14-heading">What do you look for in a friend?</h2>
+        <div class="answer-choice">
+          <img src="images/understand.jpg" alt="understand" />
+          <br />
+          <button class="button" id="q14a1" data-result="8">Someone who understands me even if others don't</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/honest.jpg" alt="honest" />
+          <br />
+          <button class="button" id="q14a2" data-result="5">Someone who is honest with me even if it'll hurt my feelings</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/fun2.jpg" alt="fun" />
+          <br />
+          <button class="button" id="q14a3" data-result="4">Someone I can goof off with that matches my energy</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/loyal.jpg" alt="loyal" />
+          <br />
+          <button class="button" id="q14a4" data-result="2">Someone who will stay by my side throughout thick and thin</button>
+        </div>
+      </section>
+
+      <section class="question" id="q15" role="region" aria-labelledby="q15-heading">
+        <h2 id="q15-heading">Finally...Pick a colour</h2>
+        <div class="answer-choice">
+          <img src="images/red.jpeg" alt="red" />
+          <br />
+          <button class="button" id="q15a1" data-result="1">Red</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/yellow.jpg" alt="yellow" />
+          <br />
+          <button class="button" id="q15a2" data-result="3">Yellow</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/green.jpg" alt="green" />
+          <br />
+          <button class="button" id="q15a3" data-result="8">Green</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/blue.jpg" alt="blue" />
+          <br />
+          <button class="button" id="q15a4" data-result="7">Blue</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/purple.png" alt="purple" />
+          <br />
+          <button class="button" id="q15a5" data-result="6">Purple</button>
+        </div>
+        <div class="answer-choice">
+          <img src="images/pink.jpg" alt="pink" />
+          <br />
+          <button class="button" id="q15a6" data-result="4">Pink</button>
+        </div>
+      </section>
+
+      <section id="result-section" aria-live="polite">
+        <img id="result-img" class="result-image" src="" alt="" />
+        <h3 id="result">Your result is...</h3>
+        <p id="result-subtitle" class="result-subtitle"></p>
+        <p id="result-desc" class="result-desc"></p>
+        <p id="result-extra" class="result-extra"></p>
+        <div class="share">
+          <a id="share-twitter" class="share-btn" target="_blank" rel="noopener">Share on Twitter</a>
+          <a id="share-email" class="share-btn">Share by Email</a>
+          <button id="copy-link" class="share-btn">Copy result link</button>
+          <button id="retake-btn" class="share-btn">Retake Quiz</button>
+        </div>
+      </section>
+
+      <div class="controls" id="controls-bottom" style="display: none;">
+        <button id="back-btn" class="back-button" aria-label="Previous question" disabled>← Back</button>
+        <div class="progress" id="progress" aria-live="polite">
+          <span id="progress-text">Question 1 / 5</span>
+          <div class="progress-bar" aria-hidden="true">
+            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
